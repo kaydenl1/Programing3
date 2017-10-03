@@ -13,9 +13,9 @@ this.age = 1;
 
 public Person(String name, int age, String gender, String occupation){
 this.name = name;
-this.age = age;
-this.gender = gender;
-this.occupation = occupation;
+this.age = "age: " age;
+this.gender = "gender: "gender;
+this.occupation = "occupation: "occupation;
 }
 
 public String getName(){
