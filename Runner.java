@@ -7,13 +7,13 @@ public class Runner{
     splash.splashScreenStart();
     splash.splashScreenEnd();
     
-    Person Kayden = new Person();
-    Kayden.name = "Kayden";
-    Kayden.age = 17;
-    Kayden.gender = "male";
-    Kayden.occupation = "Student";
+    Person Kayden = new Person("Kayden" , 17, "male" , "Student", false);
+    //Kayden.getName() = "Kayden";
+    //Kayden.getAge() = 17;
+    //Kayden.getGender() = "male";
+    //Kayden.getOccupation() = "Student";
     
-    System.out.println(Kayden.name);
+    System.out.println("Kayden is: " + Kayden);
     
     
   }
