@@ -61,7 +61,7 @@ public void setIsUsable(boolean isUseable){
   
   public String toString(){
  
-   return "You found: " + this.name + "It is a level " + this.armorClass + "balistic protection and is: " + this.size + "and weighs: " + this.weight + "lb" + " its condition is: " + this.wear + this.isUsable;
+   return "You found: " + this.name + "It is a level " + this.armorClass + "balistic protection and is: " + this.size + "and weighs: " + this.weight + "Kg" + " its condition is: " + this.wear + this.isUsable;
     
   }
     

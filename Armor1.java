@@ -1,8 +1,7 @@
+public class Armor1 extends Armor{
 
-public class Armor1A extends Armor{
-
-public Armor1A(){
-  super.setName("Level 1A Armor");
+public Armor1(){
+  super.setName("Level 1 Armor");
   super.setArmorClass(1);
   super.setSize(1);
   super.setWeight(1);
