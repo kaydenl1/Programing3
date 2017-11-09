@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /*
   This is class Runner. This is where the whole game is run from.
-  Date last modified: 10/19/2017
+  Date last modified: 11/9/2017
 */
 
 public class Runner{
@@ -22,42 +22,58 @@ public class Runner{
 
    splash.splashScreenStart();
    splash.splashScreenEnd();
+    
+    //declare the menu object
+    Menu menu = new Menu();
 
+    //seting up scanner
    Scanner scanner = new Scanner(System.in);
+    
+    int option; //will hold user input for menu option
+    
+    //loop thorugh meny untill user enters 5 (for quiting)
+    
+    do{
+      //draw menu
+      menu.drawMenu();
+      //get user input
+     option =  scanner.nextInt();
+      menu.selection(option);
+    }while(option != 2);
 
    System.out.println("Enter your charachters name: ");
+    
+   Player player  = new Player();
 
    String name = scanner.next();
-
-   System.out.println("You have named your charachter: " + name);
-
-   System.out.println("Enter aditional information on your charachter: ");
+  player.setName(name);
+   System.out.println("you have named your person: " + player.getName());
+    
+    System.out.println("Would you like to enter in additional information on your charachter");
 
    ArrayList<Person> list = new ArrayList<>();
 
-    Person person = new Person();
-
     String aditionalInfo = scanner.next();
 
-    if (aditionalInfo == "yes"){
+    if (aditionalInfo.contains("y") ){
       System.out.println("Enter your charachters age: ");
         int ageOfPerson = scanner.nextInt();
-        person.setAge(ageOfPerson);
+        player.setAge(ageOfPerson);
       System.out.println("Enter the gender of your charachter: ");
         String genderOfPerson = scanner.next();
-        person.setGender(genderOfPerson);
+        player.setGender(genderOfPerson);
       System.out.println("Enter the occupation of your charachter: ");
         String occupationOfPerson = scanner.next();
-        person.setOccupation(occupationOfPerson);
+        player.setOccupation(occupationOfPerson);
       System.out.println("are you a gopnik?");
         String isPersonGopnik = scanner.next();
      if (isPersonGopnik.contains("true") || isPersonGopnik.contains("yes"))
         {
-        person.setIsGopnik(true);
+        player.setIsGopnik(true);
         }
      else
         {
-        person.setIsGopnik(false);
+        player.setIsGopnik(false);
         }
 
        System.out.println("Enter the number of charachters you want to go with you: ");
@@ -138,9 +154,9 @@ public class Runner{
       }
    }
 
-      Person Kayden = new Person("Kayden" , 17, "male" , "Student", false);
+    //  Person Kayden = new Person("Kayden" , 17, "male" , "Student", false);
 
-      System.out.println("Kayden is: " + Kayden);
+   //   System.out.println("Kayden is: " + Kayden);
 
 
 

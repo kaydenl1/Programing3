@@ -1,33 +1,38 @@
+/*
+this is class story it creates the story
+Date last modified: 11/9/2017
+*/
+
 public class Story{
 
   private String roomName;
-  private int roomDiscription;
+  private String roomDiscription;
   private boolean isLocked;
 
-  public Armor(){
+  public Story(){
   boolean isLocked = false;
   }
   
-  public Armor(String name, int armorClass, int size, int weight, double wear, boolean isUsable){
+  public Story(String roomName, String roomDiscription, boolean isLocked){
    this.roomName = roomName;
    this.roomDiscription = roomDiscription;
    this.isLocked = isLocked;
   }
   
-  /*
+public String getRoomName(){
+  return this.roomName;
+}
+public void setRoomName(String roomName){
+  this.roomName = roomName;
+}
+public String roomDiscription(){
+  return this.roomDiscription;
+}
+public void setRoomDiscription(String roomDiscription){
+  this.roomDiscription = roomDiscription;
+}
   
-public String getName(){
-  return this.name;
-}
-public void setName(String name){
-  this.name = name;
-}
-public int getArmorClass(){
-  return this.armorClass;
-}
-public void setArmorClass(int armorClass){
-  this.armorClass = armorClass;
-}
+  /*
 public int GetSize(){
   return this.size;
 }
